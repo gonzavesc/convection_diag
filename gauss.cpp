@@ -45,7 +45,7 @@ void Gauss_seidel(std::vector<std::vector<double>>& phi,const  std::vector<doubl
         {
                 prev = phi[0][j];
                 phi[0][j] = phi[1][j]; 
-                rms = rms + (phi[0][j] - prev) * (phi[0][j] - prev);
+                rms = std::max(rms, std::abs(phi[0][j] - prev));
                 prev = phi[test::Ny][j];
                 phi[test::Ny][j] = phi[test::Ny-1][j]; 
                 rms = std::max(rms, std::abs(phi[test::Ny][j] - prev));
