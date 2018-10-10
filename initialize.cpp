@@ -44,14 +44,11 @@ void Set_Phi(std::vector<std::vector<double>>& phi)
     for(int i = 0; i <= test::Ny; i++)
     {
         phi[i][test::Nx] = 1.0;
-        phi[i][0] = 0.0;
     }
     for(int j = 0; j <= test::Nx; j++)
     {
         phi[0][j] = 1.0;
-        phi[test::Ny][j] = 0.0;
     }
-
 }
 
 void Set_Phip(std::vector<std::vector<double>>& phi_p, const std::vector<std::vector<double>>& phi)
