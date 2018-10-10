@@ -9,5 +9,5 @@ dy 0.01
 dt 1
 runtime 10000
 steady 1
-method 4
+method 1
 error 1e-9
